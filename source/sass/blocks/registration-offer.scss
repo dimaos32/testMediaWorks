@@ -1,0 +1,28 @@
+.registration-offer {
+  margin-bottom: 185px;
+}
+
+.registration-offer__wrapper {
+  min-height: 370px;
+  padding: 70px;
+  background-image:
+    url("../img/bg/bg-registration-offer.png"),
+    $blue-to-right;
+  background-size: 732px 340px, 100%;
+  background-position: top 19px right 0, center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.registration-offer__content {
+  max-width: 560px;
+}
+
+.registration-offer__title {
+  margin: 0;
+  margin-bottom: 45px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.32;
+  color: $color-default-white;
+}
