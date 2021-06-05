@@ -5,6 +5,10 @@
   right: 0;
   padding: 24px 0;
   background-color: $color-transparent;
+
+  @include viewport--sm {
+    padding: 16px 0;
+  }
 }
 
 .header__logo {

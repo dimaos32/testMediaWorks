@@ -2,6 +2,10 @@
   display: none;
   width: 42px;
   height: 42px;
+
+  @include viewport--sm {
+    display: block;
+  }
 }
 
 .main-nav__list {
@@ -9,10 +13,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @include viewport--sm {
+    display: none;
+  }
 }
 
 .main-nav__item {
   margin-left: 75px;
+
+  @include viewport--md {
+    margin-left: 60px;
+  }
 }
 
 .main-nav__link {

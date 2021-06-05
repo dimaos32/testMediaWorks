@@ -26,4 +26,8 @@
     color: rgba($color-outrageous-orange, 0.7);
     border-color: rgba($color-outrageous-orange, 0.7);
   }
+
+  @include viewport--sm {
+    width: 100%;
+  }
 }

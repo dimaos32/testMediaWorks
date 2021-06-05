@@ -1,6 +1,14 @@
 .site-offer {
   margin-bottom: 130px;
   background-image: $blue-to-right;
+
+  @include viewport--md {
+    margin-bottom: 80px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 50px;
+  }
 }
 
 .site-offer__container {
@@ -9,12 +17,33 @@
   background-size: 689px 442px;
   background-position: top 155px right 20px;
   background-repeat: no-repeat;
+
+  @include viewport--md {
+    min-height: 450px;
+    background-size: 460px 295px;
+    background-position: top 125px right 15px;
+  }
+
+  @include viewport--sm {
+    min-height: unset;
+    background: none;
+  }
 }
 
 .site-offer__content {
   max-width: 530px;
   padding: 200px 0 100px;
   color: $color-default-white;
+
+  @include viewport--md {
+    max-width: 420px;
+    padding: 130px 0 65px;
+  }
+
+  @include viewport--sm {
+    margin: 0 auto;
+    padding: 110px 0 50px;
+  }
 }
 
 .site-offer__title {
@@ -23,6 +52,16 @@
   font-weight: 600;
   font-size: 50px;
   line-height: 1.2;
+
+  @include viewport--md {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  @include viewport--sm {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 }
 
 .site-offer__desc {
@@ -31,4 +70,14 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.29;
+
+  @include viewport--md {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+
+  @include viewport--sm {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
 }

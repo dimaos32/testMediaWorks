@@ -943,12 +943,16 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin: -15px;
 }
 
 .features__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -1001,13 +1005,14 @@ button,
   background-image: url("../img/bg/bg-registration-offer.png"), -webkit-gradient(linear, left top, right top, from(#2d1686), to(#4e33b5));
   background-image: url("../img/bg/bg-registration-offer.png"), linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
   background-size: 732px 340px, 100%;
-  background-position: top 19px right 0, center;
+  background-position: bottom 13px right 0, center;
   background-repeat: no-repeat;
   border-radius: 10px;
 }
 
 .registration-offer__content {
   max-width: 560px;
+  color: #ffffff;
 }
 
 .registration-offer__title {
@@ -1016,7 +1021,6 @@ button,
   font-weight: 600;
   font-size: 34px;
   line-height: 1.32;
-  color: #ffffff;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1026,15 +1030,103 @@ button,
   }
 } */
 
-@media (max-width: 1229px) {
-  .container {
-    padding: 0 30px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+
+  .site-offer {
+    margin-bottom: 80px;
+  }
+
+  .site-offer__container {
+    min-height: 450px;
+    background-size: 460px 295px;
+    background-position: top 125px right 15px;
+  }
+
+  .site-offer__content {
+    max-width: 420px;
+    padding: 130px 0 65px;
+  }
+
+  .site-offer__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .site-offer__desc {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+
+  .main-nav__item {
+    margin-left: 60px;
+  }
+
+  .features {
+    margin-bottom: 80px;
+  }
+
+  .features__title {
+    margin-bottom: 40px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .features__list {
+    display: block;
+    margin: 0;
+  }
+
+  .features__item {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 16px 10px;
+    padding-left: 30px;
+  }
+
+  .features__item:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  .features__item-content {
+    padding: 8px 0;
+  }
+
+  .features__item-header {
+    margin-bottom: 16px;
+  }
+
+  .feature__item-decor {
+    width: 115px;
+    height: 115px;
+    margin-left: 24px;
+  }
+
+  .registration-offer {
+    margin-bottom: 105px;
+  }
+
+  .registration-offer__wrapper {
+    min-height: 300px;
+    padding: 50px;
+    background-size: 586px 272px, 100%;
+  }
+
+  .registration-offer__content {
+    max-width: 450px;
+  }
+
+  .registration-offer__title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .registration-offer__title {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -1045,6 +1137,14 @@ button,
 
   .container--no-padding {
     padding: 0;
+  }
+
+  .header {
+    padding: 16px 0;
+  }
+
+  .btn {
+    width: 100%;
   }
 
   .modal__wrapper {
@@ -1058,5 +1158,87 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .site-offer {
+    margin-bottom: 50px;
+  }
+
+  .site-offer__container {
+    min-height: unset;
+    background: none;
+  }
+
+  .site-offer__content {
+    margin: 0 auto;
+    padding: 110px 0 50px;
+  }
+
+  .site-offer__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .site-offer__desc {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  .main-nav__toggle {
+    display: block;
+  }
+
+  .main-nav__list {
+    display: none;
+  }
+
+  .features {
+    margin-bottom: 50px;
+  }
+
+  .features__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  .features__item {
+    max-width: 420px;
+    padding: 16px;
+  }
+
+  .features__item:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  .features__item-content {
+    padding: 0;
+  }
+
+  .features__item-header {
+    font-size: 20px;
+    margin-bottom: 12 px;
+  }
+
+  .feature__item-decor {
+    display: none;
+  }
+
+  .registration-offer {
+    margin-bottom: 80px;
+  }
+
+  .registration-offer__wrapper {
+    min-height: unset;
+    padding: 24px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2d1686), to(#4e33b5));
+    background-image: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
+    background-size: 100%;
+    background-position: center;
+    border-radius: 6px;
+  }
+
+  .registration-offer__content {
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
