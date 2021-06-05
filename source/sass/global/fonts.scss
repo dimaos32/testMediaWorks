@@ -1,0 +1,54 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src:
+    url("../../fonts/whitney-book.woff2") format("woff2"),
+    url("../../fonts/whitney-book.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src:
+    url("../../fonts/whitney-medium.woff2") format("woff2"),
+    url("../../fonts/whitney-medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src:
+    url("../../fonts/whitney-semibold.woff2") format("woff2"),
+    url("../../fonts/whitney-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src:
+    url("../../fonts/segoeui.woff2") format("woff2"),
+    url("../../fonts/segoeui.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src:
+    url("../../fonts/segoeui-semibold.woff2") format("woff2"),
+    url("../../fonts/segoeui-semibold.woff") format("woff");
+}

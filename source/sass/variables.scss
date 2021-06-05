@@ -1,0 +1,49 @@
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$color-haiti:                     #2e2d35;
+
+$color-outrageous-orange:         #f25b24;
+
+$color-persian-indigo:            #2d1686;
+$color-purple-heart:              #4e33b5;
+
+// Gradient
+
+$blue-to-right:                    linear-gradient(90deg, $color-persian-indigo 0%, $color-purple-heart 100%);
+
+// Typography
+//---------------------------------
+
+$font-family--whitney:              "Whitney", "Arial", sans-serif;
+$font-family--segoeui:              "Segoe UI", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$default-transition-settings:       0.3s ease;
+$modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                      320px;
+$viewport--md:                      768px;
+$viewport--lg:                      1024px;
+$viewport--xl:                      1230px;
+// $viewport--xxl:                     1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

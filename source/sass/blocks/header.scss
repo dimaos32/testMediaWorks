@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 0;
+  background-color: $color-transparent;
+}
+
+.header__logo {
+  display: block;
+
+  svg {
+    display: block;
+    width: 147px;
+    height: 32px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

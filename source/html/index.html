@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>ProjectName — Главная</title>
+
+</head>
+<body>
+
+  <div class="visually-hidden">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <div class="wrapper">
+    @@include("source/html/base/header.html", {
+      "main": true
+    })
+
+    <main>
+      <section class="site-offer">
+        <div class="container">
+
+        </div>
+      </section>
+      <div class="container">
+        <p><a href="#" data-modal="feedback">modal--feedback link</a></p>
+      </div>
+    </main>
+
+    @@include("source/html/base/modal.html", {
+      "name": "feedback"
+    })
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

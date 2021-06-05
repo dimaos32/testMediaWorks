@@ -1,0 +1,28 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="container header__container">
+    <a class="header__logo" @@if (!context.main) {href="main.html"} aria-label="Переход на главную">
+      <svg width="147" height="32">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+      </button>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 0) { href="#" }>Клиентам</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }" @@if (context.headerActiveLinkIndex !== 1) { href="#" }>
+            <svg width="24" height="24">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+            Войти
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

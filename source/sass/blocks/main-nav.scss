@@ -1,0 +1,44 @@
+.main-nav {
+
+}
+
+.main-nav__toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+}
+
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-nav__item {
+  margin-left: 75px;
+}
+
+.main-nav__link {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  color: $color-default-white;
+  transition: color $default-transition-settings;
+
+  svg {
+    display: block;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-outrageous-orange;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
