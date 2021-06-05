@@ -8,49 +8,41 @@
   clip: rect(0 0 0 0);
 }
 
-// .wrapper {
-//   position: relative;
+.wrapper {
+  position: relative;
 
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-//   min-height: calc(100 * var(--vh, 1vh));
-//   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden;
 
-//   &--no-scrollbar {
-//     height: 100vh;
-//     height: calc(100 * var(--vh, 1vh));
+  &--no-scrollbar {
+    height: 100vh;
+    height: calc(100 * var(--vh, 1vh));
 
-//     -ms-overflow-style: none;
-//     scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-//     &::-webkit-scrollbar {
-//       display: none;
-//     }
-//   }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 
-//   .header,
-//   .footer {
-//     flex-shrink: 0;
-//   }
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
 
-//   main {
-//     flex-grow: 1;
-//   }
-// }
+  main {
+    flex-grow: 1;
+  }
+}
 
 .scroll-lock {
   position: fixed;
 
   overflow-y: auto;
-}
-
-.btn-reset {
-  padding: 0;
-
-  background: $color-transparent;
-  border: none;
-  cursor: pointer;
 }
 
 @keyframes disableBreakpointAnimation {

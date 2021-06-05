@@ -1,0 +1,27 @@
+.btn {
+  @include btn-reset;
+  display: block;
+  width: 222px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: $color-default-white;
+  background-color: $color-outrageous-orange;
+  border: 2px solid $color-outrageous-orange;
+  border-radius: 4px;
+  transition:
+    color $default-transition-settings,
+    background-color $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    color: $color-outrageous-orange;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

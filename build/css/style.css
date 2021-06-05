@@ -413,7 +413,7 @@ template {
   font-weight: 400;
   font-family: "Whitney";
   font-display: swap;
-  src: url("../../fonts/whitney-book.woff2") format("woff2"), url("../../fonts/whitney-book.woff") format("woff");
+  src: url("../fonts/whitney-book.woff2") format("woff2"), url("../fonts/whitney-book.woff") format("woff");
 }
 
 @font-face {
@@ -421,7 +421,7 @@ template {
   font-weight: 500;
   font-family: "Whitney";
   font-display: swap;
-  src: url("../../fonts/whitney-medium.woff2") format("woff2"), url("../../fonts/whitney-medium.woff") format("woff");
+  src: url("../fonts/whitney-medium.woff2") format("woff2"), url("../fonts/whitney-medium.woff") format("woff");
 }
 
 @font-face {
@@ -429,7 +429,7 @@ template {
   font-weight: 600;
   font-family: "Whitney";
   font-display: swap;
-  src: url("../../fonts/whitney-semibold.woff2") format("woff2"), url("../../fonts/whitney-semibold.woff") format("woff");
+  src: url("../fonts/whitney-semibold.woff2") format("woff2"), url("../fonts/whitney-semibold.woff") format("woff");
 }
 
 @font-face {
@@ -437,7 +437,7 @@ template {
   font-weight: 400;
   font-family: "Segoe UI";
   font-display: swap;
-  src: url("../../fonts/segoeui.woff2") format("woff2"), url("../../fonts/segoeui.woff") format("woff");
+  src: url("../fonts/segoeui.woff2") format("woff2"), url("../fonts/segoeui.woff") format("woff");
 }
 
 @font-face {
@@ -445,7 +445,7 @@ template {
   font-weight: 600;
   font-family: "Segoe UI";
   font-display: swap;
-  src: url("../../fonts/segoeui-semibold.woff2") format("woff2"), url("../../fonts/segoeui-semibold.woff") format("woff");
+  src: url("../fonts/segoeui-semibold.woff2") format("woff2"), url("../fonts/segoeui-semibold.woff") format("woff");
 }
 
 *,
@@ -600,16 +600,46 @@ button,
   clip: rect(0 0 0 0);
 }
 
+.wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden;
+}
+
+.wrapper--no-scrollbar {
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wrapper--no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper .header,
+.wrapper .footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.wrapper main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .scroll-lock {
   position: fixed;
   overflow-y: auto;
-}
-
-.btn-reset {
-  padding: 0;
-  background: rgba(255, 255, 255, 0);
-  border: none;
-  cursor: pointer;
 }
 
 @-webkit-keyframes disableBreakpointAnimation {
@@ -672,6 +702,36 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.btn {
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 222px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  background-color: #f25b24;
+  border: 2px solid #f25b24;
+  border-radius: 4px;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #f25b24;
+  background-color: #ffffff;
+}
+
+.btn:active {
+  opacity: 0.7;
 }
 
 .modal {
@@ -773,9 +833,39 @@ button,
 }
 
 .site-offer {
-  min-height: 200px;
+  margin-bottom: 130px;
   background-image: -webkit-gradient(linear, left top, right top, from(#2d1686), to(#4e33b5));
   background-image: linear-gradient(90deg, #2d1686 0%, #4e33b5 100%);
+}
+
+.site-offer__container {
+  min-height: 700px;
+  background-image: url("../img/bg/bg-main-offer.svg");
+  background-size: 689px 442px;
+  background-position: top 155px right 20px;
+  background-repeat: no-repeat;
+}
+
+.site-offer__content {
+  width: 530px;
+  padding: 200px 0 100px;
+  color: #ffffff;
+}
+
+.site-offer__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.site-offer__desc {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.29;
 }
 
 .main-nav__toggle {

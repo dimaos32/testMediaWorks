@@ -1,4 +1,34 @@
 .site-offer {
-  min-height: 200px;
+  margin-bottom: 130px;
   background-image: $blue-to-right;
+}
+
+.site-offer__container {
+  min-height: 700px;
+  background-image: url("../img/bg/bg-main-offer.svg");
+  background-size: 689px 442px;
+  background-position: top 155px right 20px;
+  background-repeat: no-repeat;
+}
+
+.site-offer__content {
+  width: 530px;
+  padding: 200px 0 100px;
+  color: $color-default-white;
+}
+
+.site-offer__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.site-offer__desc {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.29;
 }
