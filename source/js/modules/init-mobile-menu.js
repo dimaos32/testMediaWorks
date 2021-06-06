@@ -7,6 +7,7 @@ const initMobileMenu = () => {
   }
 
   const toggle = nav.querySelector('.main-nav__toggle');
+  const list = nav.querySelector('.main-nav__list');
   const overlay = nav.querySelector('.main-nav__overlay');
 
   const onOverlayClick = () => {
@@ -57,7 +58,16 @@ const initMobileMenu = () => {
     }
   };
 
+  const onLinkClick = ({target}) => {
+    const link = target.closest('.main-nav__link');
+
+    if (link) {
+      closeMenu();
+    }
+  };
+
   toggle.addEventListener('click', onToggleClick);
+  list.addEventListener('click', onLinkClick);
 };
 
 export {initMobileMenu};
