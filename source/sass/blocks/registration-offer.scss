@@ -44,6 +44,7 @@
   @include viewport--md {
     max-width: 450px;
   }
+
   @include viewport--sm {
     max-width: 420px;
     margin: 0 auto;

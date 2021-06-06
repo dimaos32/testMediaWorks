@@ -1,11 +1,3 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}
-
-// Desktop first
-
 @mixin viewport--xl {
   @media (max-width: $viewport--xxl - 1) {
     @content;
@@ -29,32 +21,6 @@
     @content;
   }
 }
-
-// Mobile first
-
-/* @mixin viewport--md {
-  @media (min-width: $viewport--md) {
-    @content;
-  }
-}
-
-@mixin viewport--lg {
-  @media (min-width: $viewport--lg) {
-    @content;
-  }
-}
-
-@mixin viewport--xl {
-  @media (min-width: $viewport--xl) {
-    @content;
-  }
-}
-
-@mixin viewport--xxl {
-  @media (min-width: $viewport--xxl) {
-    @content;
-  }
-} */
 
 @mixin reset-list {
   margin: 0;
