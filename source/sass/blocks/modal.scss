@@ -102,11 +102,13 @@
       transform: translate(-50%, -50%) rotate(-45deg);
     }
 
-    &:hover::before,
-    &:focus::before,
-    &:hover::after,
-    &:focus::after {
-      background-color: $color-outrageous-orange;
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover::before,
+      &:focus::before,
+      &:hover::after,
+      &:focus::after {
+        background-color: $color-outrageous-orange;
+      }
     }
 
     &:active {

@@ -35,5 +35,9 @@
     &:last-of-type {
       margin-bottom: 34px;
     }
+
+    &:hover {
+      border-color: $color-outrageous-orange;
+    }
   }
 }

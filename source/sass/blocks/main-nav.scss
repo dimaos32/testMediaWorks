@@ -36,15 +36,17 @@
     display: block;
   }
 
-  &:hover::before,
-  &:focus::before {
-    background-color: $color-outrageous-orange;
-    box-shadow: 0 5px $color-outrageous-orange;
-  }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover::before,
+    &:focus::before {
+      background-color: $color-outrageous-orange;
+      box-shadow: 0 5px $color-outrageous-orange;
+    }
 
-  &:hover::after,
-  &:focus::after {
-    background-color: $color-outrageous-orange;
+    &:hover::after,
+    &:focus::after {
+      background-color: $color-outrageous-orange;
+    }
   }
 
   &:active {
@@ -163,9 +165,11 @@
     height: 24px;
   }
 
-  &:hover,
-  &:focus {
-    color: $color-outrageous-orange;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: $color-outrageous-orange;
+    }
   }
 
   &:active {

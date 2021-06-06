@@ -722,12 +722,6 @@ button,
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.btn:hover,
-.btn:focus {
-  color: #f25b24;
-  background-color: #ffffff;
-}
-
 .btn:active {
   color: rgba(242, 91, 36, 0.7);
   border-color: rgba(242, 91, 36, 0.7);
@@ -846,13 +840,6 @@ button,
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.modal__close-btn:hover::before,
-.modal__close-btn:focus::before,
-.modal__close-btn:hover::after,
-.modal__close-btn:focus::after {
-  background-color: #f25b24;
-}
-
 .modal__close-btn:active {
   opacity: 0.7;
 }
@@ -959,18 +946,6 @@ button,
   transform: translate(-50%, calc(-50% + 5px));
 }
 
-.main-nav__toggle:hover::before,
-.main-nav__toggle:focus::before {
-  background-color: #f25b24;
-  -webkit-box-shadow: 0 5px #f25b24;
-  box-shadow: 0 5px #f25b24;
-}
-
-.main-nav__toggle:hover::after,
-.main-nav__toggle:focus::after {
-  background-color: #f25b24;
-}
-
 .main-nav__toggle:active {
   opacity: 0.7;
 }
@@ -1023,11 +998,6 @@ button,
   margin-right: 12px;
   width: 24px;
   height: 24px;
-}
-
-.main-nav__link:hover,
-.main-nav__link:focus {
-  color: #f25b24;
 }
 
 .main-nav__link:active {
@@ -1189,12 +1159,48 @@ button,
   margin-bottom: 34px;
 }
 
+.modal-authorization__form input:hover {
+  border-color: #f25b24;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
     color: red;
   }
 } */
+
+@media (hover: hover), screen and (min-width: 0\0) {
+  .btn:hover,
+  .btn:focus {
+    color: #f25b24;
+    background-color: #ffffff;
+  }
+
+  .modal__close-btn:hover::before,
+  .modal__close-btn:focus::before,
+  .modal__close-btn:hover::after,
+  .modal__close-btn:focus::after {
+    background-color: #f25b24;
+  }
+
+  .main-nav__toggle:hover::before,
+  .main-nav__toggle:focus::before {
+    background-color: #f25b24;
+    -webkit-box-shadow: 0 5px #f25b24;
+    box-shadow: 0 5px #f25b24;
+  }
+
+  .main-nav__toggle:hover::after,
+  .main-nav__toggle:focus::after {
+    background-color: #f25b24;
+  }
+
+  .main-nav__link:hover,
+  .main-nav__link:focus {
+    color: #f25b24;
+  }
+}
 
 @media (max-width: 1023px) {
   .container {
