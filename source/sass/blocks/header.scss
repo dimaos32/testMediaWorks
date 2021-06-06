@@ -16,8 +16,11 @@
 
   svg {
     display: block;
-    width: 147px;
-    height: 32px;
+
+    @include viewport--sm {
+      width: 110px;
+      height: 24px;
+    }
   }
 }
 

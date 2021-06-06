@@ -1,5 +1,3 @@
-import {disableScrolling, enableScrolling} from './scroll-lock';
-
 const openModal = (modal, callback, preventScrollLock) => {
   modal.classList.add('modal--active');
 
@@ -8,7 +6,9 @@ const openModal = (modal, callback, preventScrollLock) => {
   }
 
   if (!preventScrollLock) {
-    disableScrolling();
+    window.disableBodyScroll(modal, {
+      reserveScrollBarGap: true,
+    });
   }
 };
 
@@ -20,7 +20,7 @@ const closeModal = (modal, callback, preventScrollLock) => {
   }
 
   if (!preventScrollLock) {
-    setTimeout(enableScrolling, 300);
+    setTimeout(window.enableBodyScroll(modal), 300);
   }
 };
 

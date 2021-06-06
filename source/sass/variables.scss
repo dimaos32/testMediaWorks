@@ -10,6 +10,7 @@ $color-transparent:               rgba(255, 255, 255, 0);
 
 // Base
 
+$color-haiti-2:                   #1c182f;
 $color-haiti:                     #2e2d35;
 $color-grape:                     #474351;
 $color-magnolia:                  #f6f5f9;
@@ -22,6 +23,10 @@ $color-purple-heart:              #4e33b5;
 // Gradient
 
 $blue-to-right:                    linear-gradient(90deg, $color-persian-indigo 0%, $color-purple-heart 100%);
+
+// Shadow
+
+$default-shadow:                   0 10px 60px rgba($color-default-black, 0.25);
 
 // Typography
 //---------------------------------

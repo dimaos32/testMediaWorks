@@ -1,11 +1,89 @@
 .main-nav__toggle {
+  @include btn-reset;
+  position: absolute;
+  top: 8px;
+  left: -50px;
   display: none;
   width: 42px;
   height: 42px;
 
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: $color-default-white;
+    border-radius: 1px;
+    transition:
+      transform $default-transition-settings,
+      box-shadow $default-transition-settings;
+  }
+
+  &::before {
+    transform: translate(-50%, calc(-50% - 5px));
+    box-shadow: 0 5px $color-default-white;
+  }
+
+  &::after {
+    transform: translate(-50%, calc(-50% + 5px));
+  }
+
   @include viewport--sm {
     display: block;
   }
+
+  .main-nav.open & {
+    &::before {
+      box-shadow: 0 0 $color-default-white;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.main-nav__overlay {
+  @include viewport--sm {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-haiti-2, 0.3);
+    transition:
+      visibility $default-transition-settings,
+      opacity $default-transition-settings;
+
+    .main-nav.open & {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.main-nav__wrapper {
+  @include viewport--sm {
+    display: flex;
+    align-items: stretch;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 200px;
+    transition: transform $default-transition-settings;
+
+    .main-nav.open & {
+      transform: translateX(-100%);
+    }
+  }
+
 }
 
 .main-nav__list {
@@ -15,7 +93,24 @@
   align-items: center;
 
   @include viewport--sm {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    flex-grow: 1;
+    display: block;
+    padding: 12px;
+    background: $color-default-white;
+    box-shadow: $default-shadow;
+    transition:
+      visibility 0s ease 0.31s,
+      opacity 0s ease 0.31s;
+
+    .main-nav.open & {
+      visibility: visible;
+      opacity: 1;
+      transition:
+        visibility 0s ease 0s,
+        opacity 0s ease 0s;
+    }
   }
 }
 
@@ -24,6 +119,14 @@
 
   @include viewport--md {
     margin-left: 60px;
+  }
+
+  @include viewport--sm {
+    margin-left: 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-haiti;
+    }
   }
 }
 
@@ -48,5 +151,10 @@
 
   &:active {
     opacity: 0.7;
+  }
+
+  @include viewport--sm {
+    padding: 12px 0;
+    color: $color-haiti;
   }
 }

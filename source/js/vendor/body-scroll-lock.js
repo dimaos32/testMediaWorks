@@ -1,120 +1,15 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/vendor.js");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./js/vendor.js":
-/*!**********************!*\
-  !*** ./js/vendor.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor_body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/body-scroll-lock */ "./js/vendor/body-scroll-lock.js");
-/* harmony import */ var _vendor_body_scroll_lock__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_body_scroll_lock__WEBPACK_IMPORTED_MODULE_0__);
- // import './vendor/swiper';
-
-/***/ }),
-
-/***/ "./js/vendor/body-scroll-lock.js":
-/*!***************************************!*\
-  !*** ./js/vendor/body-scroll-lock.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-  if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else { var mod; }
+(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(['exports'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    window.bodyScrollLock = mod.exports;
+  }
 })(this, function (exports) {
   'use strict';
 
@@ -132,32 +27,35 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     } else {
       return Array.from(arr);
     }
-  } // Older browsers don't support event options, feature detect it.
+  }
+
+  // Older browsers don't support event options, feature detect it.
+
   // Adopted and modified solution from Bohdan Didukh (2017)
   // https://stackoverflow.com/questions/41594997/ios-10-safari-prevent-scrolling-behind-a-fixed-overlay-and-maintain-scroll-posi
 
-
   var hasPassiveEvents = false;
-
   if (typeof window !== 'undefined') {
     var passiveTestOptions = {
       get passive() {
         hasPassiveEvents = true;
         return undefined;
       }
-
     };
     window.addEventListener('testPassive', null, passiveTestOptions);
     window.removeEventListener('testPassive', null, passiveTestOptions);
   }
 
   var isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && /iP(ad|hone|od)/.test(window.navigator.platform);
+
+
   var locks = [];
   var documentListenerAdded = false;
   var initialClientY = -1;
   var previousBodyOverflowSetting = void 0;
-  var previousBodyPaddingRight = void 0; // returns true if `el` should be allowed to receive touchmove events.
+  var previousBodyPaddingRight = void 0;
 
+  // returns true if `el` should be allowed to receive touchmove events.
   var allowTouchMove = function allowTouchMove(el) {
     return locks.some(function (lock) {
       if (lock.options.allowTouchMove && lock.options.allowTouchMove(el)) {
@@ -169,18 +67,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   };
 
   var preventDefault = function preventDefault(rawEvent) {
-    var e = rawEvent || window.event; // For the case whereby consumers adds a touchmove event listener to document.
+    var e = rawEvent || window.event;
+
+    // For the case whereby consumers adds a touchmove event listener to document.
     // Recall that we do document.addEventListener('touchmove', preventDefault, { passive: false })
     // in disableBodyScroll - so if we provide this opportunity to allowTouchMove, then
     // the touchmove event on document will break.
-
     if (allowTouchMove(e.target)) {
       return true;
-    } // Do not prevent if the event has more than one touch (usually meaning this is a multi touch gesture like pinch to zoom).
+    }
 
-
+    // Do not prevent if the event has more than one touch (usually meaning this is a multi touch gesture like pinch to zoom).
     if (e.touches.length > 1) return true;
+
     if (e.preventDefault) e.preventDefault();
+
     return false;
   };
 
@@ -191,16 +92,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       // If previousBodyPaddingRight is already set, don't set it again.
       if (previousBodyPaddingRight === undefined) {
         var _reserveScrollBarGap = !!options && options.reserveScrollBarGap === true;
-
         var scrollBarGap = window.innerWidth - document.documentElement.clientWidth;
 
         if (_reserveScrollBarGap && scrollBarGap > 0) {
           previousBodyPaddingRight = document.body.style.paddingRight;
           document.body.style.paddingRight = scrollBarGap + 'px';
         }
-      } // If previousBodyOverflowSetting is already set, don't set it again.
+      }
 
-
+      // If previousBodyOverflowSetting is already set, don't set it again.
       if (previousBodyOverflowSetting === undefined) {
         previousBodyOverflowSetting = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
@@ -213,22 +113,24 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     // the responsiveness for some reason. Setting within a setTimeout fixes this.
     setTimeout(function () {
       if (previousBodyPaddingRight !== undefined) {
-        document.body.style.paddingRight = previousBodyPaddingRight; // Restore previousBodyPaddingRight to undefined so setOverflowHidden knows it
-        // can be set again.
+        document.body.style.paddingRight = previousBodyPaddingRight;
 
+        // Restore previousBodyPaddingRight to undefined so setOverflowHidden knows it
+        // can be set again.
         previousBodyPaddingRight = undefined;
       }
 
       if (previousBodyOverflowSetting !== undefined) {
-        document.body.style.overflow = previousBodyOverflowSetting; // Restore previousBodyOverflowSetting to undefined
-        // so setOverflowHidden knows it can be set again.
+        document.body.style.overflow = previousBodyOverflowSetting;
 
+        // Restore previousBodyOverflowSetting to undefined
+        // so setOverflowHidden knows it can be set again.
         previousBodyOverflowSetting = undefined;
       }
     });
-  }; // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+  };
 
-
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
   var isTargetElementTotallyScrolled = function isTargetElementTotallyScrolled(targetElement) {
     return targetElement ? targetElement.scrollHeight - targetElement.scrollTop <= targetElement.clientHeight : false;
   };
@@ -271,6 +173,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           targetElement: targetElement,
           options: options || {}
         };
+
         locks = [].concat(_toConsumableArray(locks), [lock]);
 
         targetElement.ontouchstart = function (event) {
@@ -279,7 +182,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
             initialClientY = event.targetTouches[0].clientY;
           }
         };
-
         targetElement.ontouchmove = function (event) {
           if (event.targetTouches.length === 1) {
             // detect single touch.
@@ -288,9 +190,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         };
 
         if (!documentListenerAdded) {
-          document.addEventListener('touchmove', preventDefault, hasPassiveEvents ? {
-            passive: false
-          } : undefined);
+          document.addEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
           documentListenerAdded = true;
         }
       }
@@ -300,6 +200,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         targetElement: targetElement,
         options: options || {}
       };
+
       locks = [].concat(_toConsumableArray(locks), [_lock]);
     }
   };
@@ -313,14 +214,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       });
 
       if (documentListenerAdded) {
-        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? {
-          passive: false
-        } : undefined);
+        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
         documentListenerAdded = false;
       }
 
-      locks = []; // Reset initial clientY.
+      locks = [];
 
+      // Reset initial clientY.
       initialClientY = -1;
     } else {
       restoreOverflowSetting();
@@ -338,21 +238,20 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
       targetElement.ontouchstart = null;
       targetElement.ontouchmove = null;
+
       locks = locks.filter(function (lock) {
         return lock.targetElement !== targetElement;
       });
 
       if (documentListenerAdded && locks.length === 0) {
-        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? {
-          passive: false
-        } : undefined);
+        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+
         documentListenerAdded = false;
       }
     } else {
       locks = locks.filter(function (lock) {
         return lock.targetElement !== targetElement;
       });
-
       if (!locks.length) {
         restoreOverflowSetting();
       }
@@ -363,7 +262,3 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   window.enableBodyScroll = enableBodyScroll;
 });
 
-/***/ })
-
-/******/ });
-//# sourceMappingURL=vendor.min.js.map

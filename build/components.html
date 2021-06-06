@@ -431,21 +431,24 @@
           </svg>
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link " href="#">Клиентам</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link " href="#">
-                <svg width="24" height="24">
-                  <use xlink:href="#icon-user"></use>
-                </svg>
-                Войти
-              </a>
-            </li>
-          </ul>
+          <div class="main-nav__overlay"></div>
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false">
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">Клиентам</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link " href="#">
+                  <svg width="24" height="24">
+                    <use xlink:href="#icon-user"></use>
+                  </svg>
+                  Войти
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
